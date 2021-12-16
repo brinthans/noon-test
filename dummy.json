@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "username": "spider_man7766",
+      "avatar": "https://randomuser.me/api/portraits/men/77.jpg",
+      "img": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=799&q=80",
+      "tags": "#watch #time #white #smartwatch",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim fugiat voluptate vero soluta mollitia eveniet nemo.",
+      "likes": "34",
+      "comments": "13"
+    },
+    {
+      "id": 2,
+      "username": "bat_man_777",
+      "avatar": "https://randomuser.me/api/portraits/men/88.jpg",
+      "img": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "tags": "#headset #music #earphones #wireless",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim fugiat voluptate vero soluta mollitia eveniet nemo.",
+      "likes": "12",
+      "comments": "10"
+    },
+    {
+      "id": 3,
+      "username": "super_man09",
+      "avatar": "https://randomuser.me/api/portraits/men/92.jpg",
+      "img": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "tags": "#camera #capture #click #polaroid #classic #analog",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim fugiat voluptate vero soluta mollitia eveniet nemo.",
+      "likes": "56",
+      "comments": "5"
+    },
+    {
+      "id": 4,
+      "username": "tin_tin55",
+      "avatar": "https://randomuser.me/api/portraits/men/10.jpg",
+      "img": "https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=404&q=80",
+      "tags": "#perfume #scent #freshness #smell #chanel #ranoutofhashtags",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim fugiat voluptate vero soluta mollitia eveniet nemo.",
+      "likes": "0",
+      "comments": "23"
+    }
+  ]
+}
