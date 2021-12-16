@@ -1,7 +1,5 @@
 import Head from "next/head";
 import styled from "styled-components";
-import { useState, useEffect } from "react";
-
 import Header from "../comps/Common/header";
 import Footer from "../comps/Common/footer";
 import Post from "../comps/Post";
@@ -15,10 +13,6 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ posts }) {
-  useEffect(() => {
-    console.log(posts, 'asdasd');
-  }, []);
-
   return (
     <>
       <Head>
