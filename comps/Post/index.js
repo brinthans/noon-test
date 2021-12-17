@@ -8,28 +8,28 @@ export default function Post({ post }) {
   const [isLiked, setIsLiked] = useState(false);
 
   useEffect(() => {
-    let likedImgs = localStorage.getItem("likedImgs")
-      ? JSON.parse(localStorage.getItem("likedImgs"))
+    let favImgs = localStorage.getItem("favImgs")
+      ? JSON.parse(localStorage.getItem("favImgs"))
       : [];
 
-    if (likedImgs.includes(post.id)) {
+    if (favImgs.includes(post.id)) {
       setIsLiked(true);
     }
   }, []);
 
   const onLike = () => {
-    let likedImgs = localStorage.getItem("likedImgs")
-      ? JSON.parse(localStorage.getItem("likedImgs"))
+    let favImgs = localStorage.getItem("favImgs")
+      ? JSON.parse(localStorage.getItem("favImgs"))
       : [];
 
-    if (likedImgs.includes(post.id)) {
-      likedImgs = likedImgs.filter((x) => x !== post.id);
+    if (favImgs.includes(post.id)) {
+      favImgs = favImgs.filter((x) => x !== post.id);
       setIsLiked(false);
     } else {
-      likedImgs.push(post.id);
+      favImgs.push(post.id);
       setIsLiked(true);
     }
-    localStorage.setItem("likedImgs", JSON.stringify(likedImgs));
+    localStorage.setItem("favImgs", JSON.stringify(favImgs));
   };
 
   return (
@@ -40,7 +40,11 @@ export default function Post({ post }) {
       </StyledPostHeader>
       <StyledImg src={post.img} alt="post"></StyledImg>
       <StyledHeartWrapper>
-        <FontAwesomeIcon icon={isLiked ? faHeart : faHeartOutlined} />
+        <FontAwesomeIcon
+          onClick={onLike}
+          icon={isLiked ? faHeart : faHeartOutlined}
+          color={isLiked ? "red" : "black"}
+        />
         <p>
           <span>{post.likes + (isLiked ? 1 : 0)}</span> Likes
         </p>
@@ -48,14 +52,14 @@ export default function Post({ post }) {
       <StyledPostDesc>
         <h2>{post.username}</h2>
         <span>
-          <p>
-            {post.description}
-          </p>
+          <p>{post.description}</p>
           <a href="">{post.tags}</a>
         </span>
       </StyledPostDesc>
       <StyledComments>
-        <p>View <span>{post.comments}</span> Comments</p>
+        <p>
+          View <span>{post.comments}</span> Comments
+        </p>
       </StyledComments>
     </StyledPost>
   );
@@ -90,14 +94,15 @@ const StyledPostHeader = styled.div`
 `;
 
 const StyledImg = styled.img`
-    width: 100%;
-    height: 385px;
-    object-fit: cover;
+  width: 100%;
+  height: 385px;
+  object-fit: cover;
 `;
 
 const StyledHeartWrapper = styled.div`
   color: #000;
   padding: 0.5rem 0.8rem;
+  cursor: pointer;
 
   p {
     font-size: 0.8rem;
@@ -110,6 +115,7 @@ const StyledHeartWrapper = styled.div`
 
 const StyledPostDesc = styled.div`
   padding: 0 0.8rem;
+  
   h2 {
     font-size: 0.9rem;
     font-weight: 600;
@@ -125,6 +131,7 @@ const StyledPostDesc = styled.div`
 
 const StyledComments = styled.div`
   padding: 0.4rem 0.8rem;
+
   p {
     font-size: 0.8rem;
     color: #8e8e8e;

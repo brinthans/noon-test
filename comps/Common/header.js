@@ -11,12 +11,12 @@ export default function Header() {
       <div className="nav-btns">
         <Link href="/">
           <StyledNavButton>
-            <FontAwesomeIcon icon={faHome} size="2x" color="#000" />
+            <FontAwesomeIcon icon={faHome} size="1x" color="#000" />
           </StyledNavButton>
         </Link>
         <Link href="/favorites">
           <StyledNavButton>
-            <FontAwesomeIcon icon={faHeart} size="2x" color="#000" />
+            <FontAwesomeIcon icon={faHeart} size="1x" color="#000" />
           </StyledNavButton>
         </Link>
       </div>
